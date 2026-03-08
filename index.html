@@ -320,7 +320,11 @@
     0 0 20px #ff1493;
   margin: 0 0 20px;
 }
-
+.claveTexto {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 1.05em;
+}
 /* AQUI PEGAS EL RESPONSIVE */
 
 @media (max-width: 900px) {
@@ -380,7 +384,39 @@
     max-width: 210px;
     border-radius: 20px;
   }
+   #candado {
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #candado div {
+    font-size: 18px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    max-width: 90vw;
+    word-break: break-word;
+  }
+
+  input[type="password"] {
+    width: 78vw;
+    max-width: 300px;
+    padding: 12px 14px;
+    font-size: 18px;
+    margin: 10px 0 16px;
+    box-sizing: border-box;
+  }
+
+  #candado button {
+    font-size: 20px;
+    padding: 10px 28px;
+  }
 }
+#candado {
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(2px);
+}
+
 </style>
   </style>
 </head>
@@ -393,7 +429,10 @@
 </div>
 
 <div id="candado" class="pantalla">
-  <div>Posible contraseña: Iloveyoumaria123</div>
+  <div>
+  Posible contraseña:<br>
+  <span class="claveTexto">Iloveyoumaria123</span>
+</div>
   <input id="password" type="password" placeholder="Ingresa la contraseña" />
   <button onclick="verificar()">Entrar</button>
 </div>
